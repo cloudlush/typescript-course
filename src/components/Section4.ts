@@ -1,4 +1,5 @@
 import React from 'react';
+import { ImportsNotUsedAsValues } from 'typescript';
 
 function Section4() {
 
@@ -53,6 +54,31 @@ function Section4() {
 
   logWeathers(todaysWeather);
 
+  //Destructuring around objects
+
+  //Set Age to Void
+  //Destructure Height
+  //Destructure Class, Specialty, and Nudity
+
+  const profile = {
+    name: 'Ava',
+    age: 20,
+    class: 'Professional',
+    specialty: 'Cosplay',
+    nudity: false,
+    height: {
+      feet: 5,
+      inches: 6
+    },
+
+    setAge(age: number): void {
+    this.age = age;
+    },
+
+    setHeight({ feet, inches }: { feet: number, inches: number }): void {
+      this.height = {feet, inches}
+    }
+  }
 
     
 
